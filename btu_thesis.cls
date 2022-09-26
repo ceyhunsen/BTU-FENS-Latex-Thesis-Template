@@ -7,8 +7,9 @@
 % Initialization.
 \ProvidesClass{btu_thesis}
 \NeedsTeXFormat{LaTeX2e}
+
+% Inherit report class.
 \LoadClass[12pt,oneside]{report}
-\nofiles
 
 % Language options for Turkish.
 \RequirePackage[turkish]{babel}
@@ -41,18 +42,22 @@
 {
 	\begin{titlepage}
 		\begin{center}
-			\large{\bfseries{
+			\large{\bfseries {
 				% University and faculty name.
-				BURSA TEKN\.{I}K \"{U}N\.{I}VERS\.{I}TES\.{I}\\
-				M\"{U}HEND\.{I}SL\.{I}K VE DO\u{G}A B\.{I}L\.{I}MLER\.{I} FAK\"{U}LTES\.{I}\\
+				\underline {
+					BURSA TEKN\.{I}K \"{U}N\.{I}VERS\.{I}TES\.{I}
+				}\\
+				\underline {
+					M\"{U}HEND\.{I}SL\.{I}K VE DO\u{G}A B\.{I}L\.{I}MLER\.{I} FAK\"{U}LTES\.{I}
+				}\\
 
 				% BTU logo.
 				\includegraphics[width=3.95cm]{images/btu_logo_turkish.jpg}
 
 				% Thesis title.
-				\uppercase {
-					\@title\\
-				}
+				\@title
+
+				L\.{I}SANS B\.{I}T\.{I}RME \c{C}ALI\c{S}MASI
 
 				% Student name.
 				\@author\\
@@ -62,6 +67,9 @@
 
 				% Supervisor.
 				Dan{\i}\c{s}man: {#2}
+
+				%Date
+				\@date
 			}}
 		\end{center}
 	\end{titlepage}
