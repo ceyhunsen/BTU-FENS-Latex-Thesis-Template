@@ -1,0 +1,20 @@
+# Git ignore file for BTU ENSF Latex thesis project.
+# If you are not a developer of this project, ignore this file.
+
+# Latex.
+*.dvi
+*.log
+*.toc
+*.lof
+*.lot
+*.aux
+*.idx
+*.ind
+*.ilg
+
+# Output.
+*.pdf
+
+# Editors.
+.vscode
+*.geany
