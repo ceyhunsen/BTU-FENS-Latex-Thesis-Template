@@ -5,7 +5,7 @@
 LATEX_ENGINE = xelatex
 
 all:
-	$(LATEX_ENGINE) main.tex btu_thesis.cls '\usepackage{blindtext}'
+	$(LATEX_ENGINE) main.tex btu_thesis.cls
 
 clean:
 	rm -rf *.dvi *.log *.toc *.lof *.lot *.aux *.idx *.ind *.ilg *.pdf
