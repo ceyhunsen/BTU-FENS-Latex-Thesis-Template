@@ -79,3 +79,8 @@
 		\end{center}
 	\end{titlepage}
 }
+
+% Start of the main content.
+\newcommand{\startcontent}[0]{%
+	\pagenumbering{arabic}
+}
