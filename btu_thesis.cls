@@ -15,6 +15,10 @@
 \RequirePackage[turkish]{babel}
 \RequirePackage[utf8]{inputenc}
 
+% Font.
+\usepackage{fontspec}
+\setmainfont[Language=Turkish]{Times New Roman}
+
 % Paper options.
 \RequirePackage[a4paper]{geometry}
 \newgeometry
@@ -35,6 +39,7 @@
 	\thispagestyle{empty}
 	\addtocounter{page}{-1}
 	\newpage
+	\pagenumbering{roman}
 }
 
 % Inner cover page.
