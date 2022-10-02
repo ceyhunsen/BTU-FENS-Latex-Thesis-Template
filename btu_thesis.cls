@@ -32,6 +32,9 @@
 % Image options.
 \RequirePackage{graphicx}
 
+% Set line spacing.
+\linespread{1.5}
+
 % Empty start page.
 \newcommand{\startthesis}
 {
