@@ -1,30 +1,31 @@
-% Entry point for Bursa Technical University, Faculty Of Engineering And Natural Sciences Latex thesis template.
-% This project is licensed under MIT license.
+% Bursa Teknik Üniversitesi, Mühendislik ve Doğa Bilimleri Fakültesi, Latex
+% tez taslağı için giriş noktası.
+%
+% Bu proje MIT lisansı ile lisanslanmıştır.
 
-% Authors:
+% Yazarlar:
 % * Ceyhun Şen <19360859023@ogrenci.btu.edu.tr>
 
-% Use BTU thesis class file.
-\documentclass{btu_thesis}
+% Sınıf dosyasını yükle.
+\documentclass{btu_mdbf_tez}
 
-% Thesis information.
-% Change this values with your own information.
-\title{BTU Latex Thesis Example}
-\author{Student Name-Surname}
+% Genel tez bilgisi. Bu bilgileri kendi bilgileriniz ile değiştirin.
+\title{BTÜ Latex Tez Taslağı}
+\author{Öğrenci Adı-Soyadı}
 \date{\today}
 
-% Begin the actual document.
+% Dökümanın giriş noktası.
 \begin{document}
-	% Start with a blank page.
+	% Tezin ilk ayarlarını yap.
 	\startthesis
 
-	% Create inner cover page.
+	% İç kapak sayfasını oluştur.
 	\innercoverpage
-		{Department Name Goes Here}
-		{Supervisor Name-Surname}
+		{Bölüm Adı}
+		{Danışman Adı-Soyadı}
 
-	% Start of the content.
+	% İçeriğin başlangıcı.
 	\startcontent
-	\include{content/example_chapter_1.tex}
-	\include{content/example_chapter_2.tex}
+	\include{icerik/ornek_bolum_1.tex}
+	\include{icerik/ornek_bolum_2.tex}
 \end{document}

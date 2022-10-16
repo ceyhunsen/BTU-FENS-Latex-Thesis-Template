@@ -1,25 +1,27 @@
-% Bursa Technical University, Faculty Of Engineering And Natural Sciences, thesis Latex class.
-% This project is licensed under MIT license.
+% Bursa Teknik Üniversitesi, Mühendislik ve Doğa Bilimleri Fakültesi, Latex
+% tez taslağı.
+%
+% Bu proje MIT lisansı ile lisanslanmıştır.
 
-% Authors:
+% Yazarlar:
 % * Ceyhun Şen <19360859023@ogrenci.btu.edu.tr>
 
-% Initialization.
+% İlk ayarlar.
 \ProvidesClass{btu_thesis}
 \NeedsTeXFormat{LaTeX2e}
 
-% Inherit report class.
+% Yeni sınıfı `report` sınıfı üzerine inşa et.
 \LoadClass[12pt,oneside]{report}
 
-% Language options for Turkish.
+% Döküman dilini Türkçe'ye ayarla.
 \RequirePackage[turkish]{babel}
 \RequirePackage[utf8]{inputenc}
 
-% Font.
+% Font'u ayarla.
 \usepackage{fontspec}
 \setmainfont[Language=Turkish]{Times New Roman}
 
-% Paper options.
+% Kağıt ayarları.
 \RequirePackage[a4paper]{geometry}
 \newgeometry
 {
@@ -29,15 +31,14 @@
 	outer=3.0cm
 }
 
-% Image options.
+% Resim ayarları.
 \RequirePackage{graphicx}
 
-% Set line spacing.
+% Satır boşluğunu ayarla.
 \linespread{1.5}
 
-% Empty start page.
-\newcommand{\startthesis}
-{
+% Tez başlangıcı.
+\newcommand{\startthesis}{%
  	\null
 	\thispagestyle{empty}
 	\addtocounter{page}{-1}
@@ -45,13 +46,12 @@
 	\pagenumbering{roman}
 }
 
-% Inner cover page.
-\newcommand{\innercoverpage}[2]
-{
+% İç kapak sayfası.
+\newcommand{\innercoverpage}[2]{%
 	\begin{titlepage}
 		\begin{center}
 			\large{\bfseries {
-				% University and faculty name.
+				% Üniversite ve fakülte adı.
 				\underline {
 					BURSA TEKN\.{I}K \"{U}N\.{I}VERS\.{I}TES\.{I}
 				}\\
@@ -59,31 +59,31 @@
 					M\"{U}HEND\.{I}SL\.{I}K VE DO\u{G}A B\.{I}L\.{I}MLER\.{I} FAK\"{U}LTES\.{I}
 				}\\
 
-				% BTU logo.
-				\includegraphics[width=3.95cm]{images/btu_logo_turkish.jpg}
+				% BTÜ logosu.
+				\includegraphics[width=3.95cm]{resimler/btu_logo.jpg}
 
-				% Thesis title.
+				% Tez başlığı.
 				\@title
 
 				L\.{I}SANS B\.{I}T\.{I}RME \c{C}ALI\c{S}MASI
 
-				% Student name.
+				% Öğrenci adı.
 				\@author\\
 
-				% Departmant name.
+				% Bölüm adı.
 				{#1} \\
 
-				% Supervisor.
+				% Danışman adı.
 				Dan{\i}\c{s}man: {#2}
 
-				%Date
+				% Tarih.
 				\@date
 			}}
 		\end{center}
 	\end{titlepage}
 }
 
-% Start of the main content.
+% İçeriğin başlangıcı.
 \newcommand{\startcontent}[0]{%
 	\pagenumbering{arabic}
 }
