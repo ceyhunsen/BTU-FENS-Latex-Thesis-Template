@@ -17,9 +17,11 @@
 \RequirePackage[turkish]{babel}
 \RequirePackage[utf8]{inputenc}
 
-% Font'u ayarla.
+% Font'u ayarla. Times New Roman ve alternatifi (özgür font) olan Liberation
+% Serif arasında seçim yapabilirsiniz.
 \usepackage{fontspec}
-\setmainfont[Language=Turkish]{Times New Roman}
+\setmainfont[Language=Turkish]{Liberation Serif}
+% \setmainfont[Language=Turkish]{Times New Roman}
 
 % Kağıt ayarları.
 \RequirePackage[a4paper]{geometry}
@@ -81,6 +83,53 @@
 			}}
 		\end{center}
 	\end{titlepage}
+}
+
+% Beyan sayfaları.
+\newcommand{\declaration}[8]{%
+	\null
+	\thispagestyle{empty}
+
+	% Beyan metni.
+	BTÜ, Mühendislik ve Doğa Bilimleri Fakültesi {#1} Bölümü’nün {#2} numaralı öğrencisi \@author, ilgili yönetmeliklerin belirlediği gerekli tüm şartları yerine getirdikten sonra hazırladığı “BİTİRME ÇALIŞMASI BAŞLIĞI” başlıklı bitirme çalışmasını aşağıda imzaları olan jüri önünde başarı ile sunmuştur.\\
+
+	% Danışman ve jüri üyleri.
+	\begin{tabbing}
+		\bfseries{Danışmanı:} \hspace{20mm} \= \bfseries{#3}\\
+		\> Bursa Teknik Üniversitesi\\
+
+		\bfseries{Jüri Üyeleri:} \> \bfseries{#4}\\
+		\> {#5}\\
+		\> \bfseries{#6}\\
+		\> {#7}\\
+
+		% Tarih.
+		\bfseries{Savunma Tarihi:} \> \@date\\
+
+		% Bölüm başkanı.
+		\bfseries{Bölüm Başkanı:} \> \bfseries{#8}\\
+		\> Bursa Teknik Üniversitesi
+		\begin{minipage}{0.5\textwidth}
+			\begin{flushright}
+			......./......./.......
+			\end{flushright}
+		\end{minipage}
+	\end{tabbing}
+
+	\newpage
+
+	% İntihal beyanı.
+	\begin{center}
+		\large{\bfseries{İNTİHAL BEYANI}}
+	\end{center}
+	Bu bitirme çalışmasında görsel, işitsel ve yazılı biçimde sunulan tüm bilgi ve sonuçların akademik ve etik kurallara uyularak tarafımdan elde edildiğini, bitirme çalışması içinde yer alan ancak bu çalışmaya özgü olmayan tüm sonuç ve bilgileri bitirme çalışmasında kaynak göstererek belgelediğimi, aksinin ortaya çıkması durumunda her türlü yasal sonucu kabul ettiğimi beyan ederim.
+
+	\begin{flushright}
+		Öğrencinin Adı Soyadı: \@author\\
+		İmzası:
+	\end{flushright}
+
+	\newpage
 }
 
 % İçeriğin başlangıcı.
