@@ -1,10 +1,9 @@
-% Bursa Teknik Üniversitesi, Mühendislik ve Doğa Bilimleri Fakültesi, Latex
-% tez taslağı.
+% Bursa Teknik Üniversitesi Latex tez sınıfı.
 %
 % Bu proje MIT lisansı ile lisanslanmıştır.
 
 % Yazarlar:
-% * Ceyhun Şen <19360859023@ogrenci.btu.edu.tr>
+% * Ceyhun Şen (19360859023@ogrenci.btu.edu.tr), 2023
 
 % İlk ayarlar.
 \ProvidesClass{btu_thesis}
