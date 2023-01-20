@@ -5,22 +5,21 @@
 % Yazarlar:
 % * Ceyhun Şen (19360859023@ogrenci.btu.edu.tr), 2023
 
-% İlk ayarlar.
-\ProvidesClass{btutez}
+% Sınıf bilgileri.
 \NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{btutez}[2023/01/20 BTÜ latex tez sınıfı]
 
 % Yeni sınıfı `report` sınıfı üzerine inşa et.
 \LoadClass[12pt,oneside]{report}
 
 % Döküman dilini Türkçe'ye ayarla.
 \RequirePackage[turkish]{babel}
-\RequirePackage[utf8]{inputenc}
 
 % Font'u ayarla. Times New Roman ve alternatifi (özgür font) olan Liberation
 % Serif arasında seçim yapabilirsiniz.
 \usepackage{fontspec}
-\setmainfont[Language=Turkish]{Liberation Serif}
-% \setmainfont[Language=Turkish]{Times New Roman}
+\setmainfont{Liberation Serif}
+% \setmainfont{Times New Roman}
 
 % Kağıt ayarları.
 \RequirePackage[a4paper]{geometry}
