@@ -6,7 +6,7 @@
 % * Ceyhun Şen (19360859023@ogrenci.btu.edu.tr), 2023
 
 % İlk ayarlar.
-\ProvidesClass{btu_thesis}
+\ProvidesClass{btutez}
 \NeedsTeXFormat{LaTeX2e}
 
 % Yeni sınıfı `report` sınıfı üzerine inşa et.
