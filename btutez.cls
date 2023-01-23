@@ -9,7 +9,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{btutez}[2023/01/20 BTÜ latex tez sınıfı]
 
-% Yeni sınıfı `report` sınıfı üzerine inşa et.
+% Yeni sınıfı `report` sınıfı üzerine 12 punto ve tek taraflı sayfa kullanacak
+% şekilde inşa et.
 \LoadClass[12pt,oneside]{report}
 
 % Döküman dilini Türkçe'ye ayarla.
@@ -21,7 +22,11 @@
 \setmainfont{Liberation Serif}
 % \setmainfont{Times New Roman}
 
-% Kağıt ayarları.
+% Satır aralığı 1.5 olmalı.
+\linespread{1.5}
+
+% Kağıt üstten ve sağdan 3 santimetre, alttan ve soldan ise 2.5 santimetre
+% boşluklu olmalı.
 \RequirePackage[a4paper]{geometry}
 \newgeometry
 {
@@ -34,29 +39,27 @@
 % Resim ayarları.
 \RequirePackage{graphicx}
 
-% Satır boşluğunu ayarla.
-\linespread{1.5}
-
-% Tez başlangıcı.
-\newcommand{\startthesis}{%
- 	\null
+% Dış kapaktan sonraki boş sayfayı ekler ve sayfa numaralandırmayı romen
+% rakamlarına çevirir.
+\newcommand{\tezibaslat}{%
+	\null
 	\thispagestyle{empty}
 	\addtocounter{page}{-1}
 	\newpage
 	\pagenumbering{roman}
 }
 
-% İç kapak sayfası.
-\newcommand{\innercoverpage}[2]{%
+% İç kapak sayfasını oluşturur.
+\newcommand{\ickapak}[3]{%
 	\begin{titlepage}
 		\begin{center}
-			\large{\bfseries {
+			\large{\bfseries{
 				% Üniversite ve fakülte adı.
 				\underline {
 					BURSA TEKN\.{I}K \"{U}N\.{I}VERS\.{I}TES\.{I}
 				}\\
 				\underline {
-					M\"{U}HEND\.{I}SL\.{I}K VE DO\u{G}A B\.{I}L\.{I}MLER\.{I} FAK\"{U}LTES\.{I}
+					#1
 				}\\
 
 				% BTÜ logosu.
@@ -71,10 +74,10 @@
 				\@author\\
 
 				% Bölüm adı.
-				{#1} \\
+				{#2} \\
 
 				% Danışman adı.
-				Dan{\i}\c{s}man: {#2}
+				Dan{\i}\c{s}man: {#3}
 
 				% Tarih.
 				\@date
